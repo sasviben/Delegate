@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primjer1Deleg", "Primjer1De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primjer2Deleg", "Primjer2Deleg\Primjer2Deleg.csproj", "{93F031AE-43E2-4211-8362-7A733C780CAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulticastDelegate", "MulticastDelegate\MulticastDelegate.csproj", "{054D40A9-3ADA-43CA-A1E2-7836F34BA899}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{93F031AE-43E2-4211-8362-7A733C780CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93F031AE-43E2-4211-8362-7A733C780CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93F031AE-43E2-4211-8362-7A733C780CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054D40A9-3ADA-43CA-A1E2-7836F34BA899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054D40A9-3ADA-43CA-A1E2-7836F34BA899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054D40A9-3ADA-43CA-A1E2-7836F34BA899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054D40A9-3ADA-43CA-A1E2-7836F34BA899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
