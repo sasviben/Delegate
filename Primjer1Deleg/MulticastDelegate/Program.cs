@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public delegate int SampleDelegete();
+public delegate void SampleDelegete(out int Integer);
 
 namespace MulticastDelegate
 {
@@ -15,17 +15,19 @@ namespace MulticastDelegate
             SampleDelegete del = new SampleDelegete(SampleMethodOne);
             del += SampleMethodTwo;
 
-            int DelegateReturnedValue = del();
+            int DelegateOutputParameterValue = -1;
 
-            Console.WriteLine("DelegateReturnedValue = {0}", DelegateReturnedValue);
+            del(out DelegateOutputParameterValue);
+
+            Console.WriteLine("DelegateOutputParameterValue = {0}", DelegateOutputParameterValue);
         }
-        public static int SampleMethodOne()
+        public static void SampleMethodOne(out int Number)
         {
-            return 1;
+            Number = 1;
         }
-        public static int SampleMethodTwo()
+        public static void SampleMethodTwo(out int Number)
         {
-            return 2;
+            Number = 2;
         }
        
     }
