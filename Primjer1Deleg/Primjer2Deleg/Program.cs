@@ -19,6 +19,7 @@ namespace Primjer2Deleg
             Employee.PromotedEmployee(empList);
         }
     }
+    //TODO promjena harkodirane logike u if uvijetu u prilagodnjivu logiku pomocu delegata
     class Employee
     {
         public int ID { get; set; }
