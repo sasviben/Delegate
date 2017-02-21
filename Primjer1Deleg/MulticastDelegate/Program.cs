@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public delegate void SampleDelegete();
+public delegate int SampleDelegete();
 
 namespace MulticastDelegate
 {
@@ -14,21 +14,19 @@ namespace MulticastDelegate
         {
             SampleDelegete del = new SampleDelegete(SampleMethodOne);
             del += SampleMethodTwo;
-            del += SampleMethodThree;
 
-            del();
+            int DelegateReturnedValue = del();
+
+            Console.WriteLine("DelegateReturnedValue = {0}", DelegateReturnedValue);
         }
-        public static void SampleMethodOne()
+        public static int SampleMethodOne()
         {
-            Console.WriteLine("SampleMethodOne Invoked");
+            return 1;
         }
-        public static void SampleMethodTwo()
+        public static int SampleMethodTwo()
         {
-            Console.WriteLine("SampleMethodTwo Invoked");
+            return 2;
         }
-        public static void SampleMethodThree()
-        {
-            Console.WriteLine("SampleMethodThree Invoked");
-        }
+       
     }
 }
