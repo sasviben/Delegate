@@ -16,21 +16,11 @@ namespace Primjer2Deleg
             empList.Add(new Employee() { ID = 101, Name = "Sandro", Salary = 5000, Experinece = 5 });
             empList.Add(new Employee() { ID = 101, Name = "Filip", Salary = 4000, Experinece = 4 });
             empList.Add(new Employee() { ID = 101, Name = "Hrvoje", Salary = 7000, Experinece = 7 });
-
-            IsPromotable promotable = new IsPromotable(Promote);//pokazuje na metodu Promote
-
-
-            Employee.PromotedEmployee(empList,promotable);
+            //lambda izraz
+           Employee.PromotedEmployee(empList,emp => emp.Experinece >= 5);
         }
         //logika za IsEligibleToPromote u if izrazu unutar klase Employee
-        public static bool Promote(Employee emp)
-        {
-            if (emp.Experinece >= 5)
-            {
-                return true;
-            }
-            else return false;
-        }
+       
     }
     //odnosi se na if uvijet
     delegate bool IsPromotable(Employee empl);
