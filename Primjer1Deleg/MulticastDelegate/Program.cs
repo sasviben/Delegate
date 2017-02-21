@@ -12,13 +12,11 @@ namespace MulticastDelegate
     {
         static void Main(string[] args)
         {
-            SampleDelegete del1, del2, del3, del4;
-            del1 = new SampleDelegete(SampleMethodOne);
-            del2 = new SampleDelegete(SampleMethodTwo);
-            del3 = new SampleDelegete(SampleMethodThree);
+            SampleDelegete del = new SampleDelegete(SampleMethodOne);
+            del += SampleMethodTwo;
+            del += SampleMethodThree;
 
-            del4 = del1 + del2 + del3;
-            del4();
+            del();
         }
         public static void SampleMethodOne()
         {
